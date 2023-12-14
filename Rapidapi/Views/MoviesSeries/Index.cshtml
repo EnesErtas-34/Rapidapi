@@ -1,0 +1,31 @@
+﻿@model List<SeriesViewModel>
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <h2>Imdb Top 100 Dizi</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Dizi Adı</th>
+            <th>Dizi Puanı</th>
+            <th>Detaylar</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.rank</td>
+                <td>@item.title</td>
+                <td>@item.rating</td>
+                <td><a href="@item.imdb_link" class="btn btn-dark">Detaylar</a></td>
+            </tr>
+          
+        }
+    </table>
+</div>
+
+

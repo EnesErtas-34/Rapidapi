@@ -1,0 +1,30 @@
+﻿@model WeatherViewModel
+
+@{
+    Layout = null;
+}
+
+<h3>Hava Durumu API</h3>
+<br />
+<table class="table table-hover">
+    <tr>
+
+        <th>Şehir</th>
+        <th>Sıcaklık</th>
+        <th>Durum</th>
+        <th>Nemlilik Oranı</th>
+
+    </tr>
+    <tr>
+
+        <th>@Model.location.city</th>
+        <th>@Model.current_observation.condition.temperature C</th>
+        <th>@Model.current_observation.condition.text</th>
+        <th>@Model.current_observation.atmosphere.humidity</th>
+
+
+
+    </tr>
+</table>
+
+
